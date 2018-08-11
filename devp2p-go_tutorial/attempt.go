@@ -35,11 +35,11 @@ func main() {
 
 	nodekey, _ := crypto.GenerateKey()
 	config := p2p.Config{
-		MaxPeers:   10,
-		PrivateKey: nodekey,
-		Name:       "my node name",
-		ListenAddr: ":30300",
-		Protocols:  []p2p.Protocol{MyProtocol()},
+		MaxPeers:       10,
+		PrivateKey:     nodekey,
+		Name:           "my node name",
+		ListenAddr:     ":30300",
+		Protocols:      []p2p.Protocol{MyProtocol()},
 		BootstrapNodes: []*discover.Node{boot},
 	}
 
